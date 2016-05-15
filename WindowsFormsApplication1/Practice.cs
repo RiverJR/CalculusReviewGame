@@ -16,6 +16,8 @@ namespace WindowsFormsApplication1 {
         Random rnd = new Random();
         int exponent;
         int frontNum;
+        int incorrect;
+        int correct;
 
         public Practice(Form startmenu) {
             InitializeComponent();
@@ -23,6 +25,8 @@ namespace WindowsFormsApplication1 {
         }
 
         private void Practice_Load(object sender, EventArgs e) {
+            incorrect = 0;
+            correct = 0;
             generateProblem();
         }
 
@@ -60,8 +64,9 @@ namespace WindowsFormsApplication1 {
             }
             else if (frontNum == 1) {
                 textBox1.Text = "x" + toSuperscript(exponent);
-            }else
-            textBox1.Text = frontNum + "x" + toSuperscript(exponent);
+            }
+            else
+                textBox1.Text = frontNum + "x" + toSuperscript(exponent);
         }
 
         private string toSuperscript(int exponent) {
@@ -95,10 +100,14 @@ namespace WindowsFormsApplication1 {
             textBox3.Text = textBox3.Text.Trim();
             if (isCorrect()) {
                 setMessage("Correct");
+                correct++;
             }
             else {
-                setMessage("Sorry, try again.");
+                setMessage("You stupit.");
+                incorrect++;
             }
+            lblCounter.Show();
+            lblCounter.Text = string.Format("{0} / {1}", correct, correct + incorrect);
             btnCheckAnswer.Enabled = false;
         }
 
