@@ -30,7 +30,10 @@ namespace WindowsFormsApplication1 {
             generateProblem();
         }
 
-        private bool isCorrect() { //checks if correct and lots of syntax exceptions.
+        /// <summary>
+	    /// Checks if correct and lots of syntax exceptions.
+    	/// </summary>
+        private bool isCorrect() {
             int frontDNum = exponent * frontNum;
             int dExponent = (exponent - 1);
             if (dExponent == 0) {
@@ -57,7 +60,10 @@ namespace WindowsFormsApplication1 {
             return false;
         }
 
-        private void generateProblem() { //Generates random problems
+        /// <summary>
+	    /// Generates random problems
+    	/// </summary>
+        private void generateProblem() {
             textBox2.Clear();
             exponent = rnd.Next(-8, 8);
             frontNum = rnd.Next(-12, 15);
@@ -74,7 +80,10 @@ namespace WindowsFormsApplication1 {
                 textBox1.Text = frontNum + "x" + toSuperscript(exponent);
         }
 
-        private string toSuperscript(int exponent) { // creates superscript unicodes
+        /// <summary>
+	    /// Creates superscript unicodes
+    	/// </summary>
+        private string toSuperscript(int exponent) {
             if (exponent == 1) {
                 return "";
             }
@@ -86,16 +95,26 @@ namespace WindowsFormsApplication1 {
             return SUPERSCRIPTS[exponent];
         }
 
-        private void setMessage(string message) { //Shows problem status message
+        /// <summary>
+	    /// Shows problem status message
+    	/// </summary>
+        private void setMessage(string message) {
             lblMessage.Text = message;
             lblMessage.Show();
         }
-        private void hideMessage() { //Hides problem status message
+        
+        /// <summary>
+	    /// Hides problem status message
+    	/// </summary>
+        private void hideMessage() {
             lblMessage.Text = "";
             lblMessage.Hide();
         }
-
-        private void checkAnswer_Click(object sender, EventArgs e) { //Checks Answer and works counter
+        
+        /// <summary>
+	    /// Checks Answer and works counter
+    	/// </summary>
+        private void checkAnswer_Click(object sender, EventArgs e) {
             textBox3.Text = textBox3.Text.Trim();
             if (isCorrect()) {
                 setMessage("Correct");
