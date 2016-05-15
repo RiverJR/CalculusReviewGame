@@ -31,7 +31,7 @@ namespace WindowsFormsApplication1 {
         }
 
         /// <summary>
-	    /// Checks if correct and lots of syntax exceptions.
+	/// Checks if correct and lots of syntax exceptions.
     	/// </summary>
         private bool isCorrect() {
             int frontDNum = exponent * frontNum;
@@ -61,7 +61,7 @@ namespace WindowsFormsApplication1 {
         }
 
         /// <summary>
-	    /// Generates random problems
+	/// Generates random problems
     	/// </summary>
         private void generateProblem() {
             textBox2.Clear();
@@ -81,7 +81,7 @@ namespace WindowsFormsApplication1 {
         }
 
         /// <summary>
-	    /// Creates superscript unicodes
+	/// Creates superscript unicodes
     	/// </summary>
         private string toSuperscript(int exponent) {
             if (exponent == 1) {
@@ -96,7 +96,7 @@ namespace WindowsFormsApplication1 {
         }
 
         /// <summary>
-	    /// Shows problem status message
+	/// Shows problem status message
     	/// </summary>
         private void setMessage(string message) {
             lblMessage.Text = message;
@@ -104,7 +104,7 @@ namespace WindowsFormsApplication1 {
         }
         
         /// <summary>
-	    /// Hides problem status message
+	/// Hides problem status message
     	/// </summary>
         private void hideMessage() {
             lblMessage.Text = "";
@@ -112,7 +112,7 @@ namespace WindowsFormsApplication1 {
         }
         
         /// <summary>
-	    /// Checks Answer and works counter
+	/// Checks Answer and works counter
     	/// </summary>
         private void checkAnswer_Click(object sender, EventArgs e) {
             textBox3.Text = textBox3.Text.Trim();
