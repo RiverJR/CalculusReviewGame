@@ -30,9 +30,14 @@ namespace WindowsFormsApplication1 {
             generateProblem();
         }
 
-        private bool isCorrect() {
+        private bool isCorrect() { //checks if correct and lots of syntax exceptions.
             int frontDNum = exponent * frontNum;
             int dExponent = (exponent - 1);
+            if (dExponent == 0) {
+                textBox2.Text = frontDNum.ToString();
+            }else if (dExponent == 1) {
+                textBox2.Text = frontDNum + "x";
+            }else
             textBox2.Text = frontDNum.ToString() + "x" + toSuperscript(dExponent);
             if (frontDNum == 0 && textBox3.Text == "0") {
                 return true;
@@ -52,7 +57,7 @@ namespace WindowsFormsApplication1 {
             return false;
         }
 
-        private void generateProblem() {
+        private void generateProblem() { //Generates random problems
             textBox2.Clear();
             exponent = rnd.Next(-8, 8);
             frontNum = rnd.Next(-12, 15);
@@ -69,7 +74,7 @@ namespace WindowsFormsApplication1 {
                 textBox1.Text = frontNum + "x" + toSuperscript(exponent);
         }
 
-        private string toSuperscript(int exponent) {
+        private string toSuperscript(int exponent) { // creates superscript unicodes
             if (exponent == 1) {
                 return "";
             }
@@ -80,23 +85,17 @@ namespace WindowsFormsApplication1 {
             }
             return SUPERSCRIPTS[exponent];
         }
-        private void setMessage(string message) {
+
+        private void setMessage(string message) { //Shows problem status message
             lblMessage.Text = message;
             lblMessage.Show();
         }
-        private void hideMessage() {
+        private void hideMessage() { //Hides problem status message
             lblMessage.Text = "";
             lblMessage.Hide();
         }
 
-        private void btnNewProb_Click(object sender, EventArgs e) {
-            textBox3.Clear();
-            btnCheckAnswer.Enabled = true;
-            hideMessage();
-            generateProblem();
-        }
-
-        private void checkAnswer_Click(object sender, EventArgs e) {
+        private void checkAnswer_Click(object sender, EventArgs e) { //Checks Answer and works counter
             textBox3.Text = textBox3.Text.Trim();
             if (isCorrect()) {
                 setMessage("Correct");
@@ -109,7 +108,17 @@ namespace WindowsFormsApplication1 {
             lblCounter.Show();
             lblCounter.Text = string.Format("{0} / {1}", correct, correct + incorrect);
             btnCheckAnswer.Enabled = false;
+            btnNewProb.Enabled = true;
         }
+
+        private void btnNewProb_Click(object sender, EventArgs e) { 
+            textBox3.Clear();
+            btnCheckAnswer.Enabled = true;
+            btnNewProb.Enabled = false;
+            hideMessage();
+            generateProblem();
+        }
+
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e) {
 
@@ -124,11 +133,15 @@ namespace WindowsFormsApplication1 {
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e) {
-
+            label3.Visible = false;
         }
 
         private void Practice_FormClosed(object sender, FormClosedEventArgs e) {
             startmenu.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e) {
+
         }
     }
 }
