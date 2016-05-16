@@ -46,7 +46,7 @@
             this.textBox1.Location = new System.Drawing.Point(206, 102);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(150, 38);
+            this.textBox1.Size = new System.Drawing.Size(202, 38);
             this.textBox1.TabIndex = 0;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -67,7 +67,7 @@
             this.textBox2.Location = new System.Drawing.Point(206, 194);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(150, 38);
+            this.textBox2.Size = new System.Drawing.Size(202, 38);
             this.textBox2.TabIndex = 2;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -77,12 +77,13 @@
             this.textBox3.ForeColor = System.Drawing.Color.Black;
             this.textBox3.Location = new System.Drawing.Point(206, 264);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(152, 38);
+            this.textBox3.Size = new System.Drawing.Size(202, 38);
             this.textBox3.TabIndex = 3;
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // btnCheckAnswer
             // 
+            this.btnCheckAnswer.Enabled = false;
             this.btnCheckAnswer.Location = new System.Drawing.Point(65, 277);
             this.btnCheckAnswer.Name = "btnCheckAnswer";
             this.btnCheckAnswer.Size = new System.Drawing.Size(135, 23);
@@ -133,7 +134,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(230, 277);
+            this.label3.Location = new System.Drawing.Point(263, 277);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 13);
             this.label3.TabIndex = 9;
