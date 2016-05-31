@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApplication1 {
+namespace CalculusGame {
     public partial class Practice :Form {
         private static readonly string[] SUPERSCRIPTS = new string[] { "\x2070" , "\x00b9" , "\x00b2" , "\x00b3" , "\x2074" , "\x2075" , "\x2076" , "\x2077" , "\x2078" , "\x2079" };
 

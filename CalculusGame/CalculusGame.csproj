@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4A8ED60F-606E-4FD7-9E2F-81B4A2AB980C}</ProjectGuid>
+    <ProjectGuid>{A84AB657-8C4C-469D-A86A-8802A06E5DF6}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WindowsFormsApplication1</RootNamespace>
-    <AssemblyName>WindowsFormsApplication1</AssemblyName>
+    <RootNamespace>CalculusGame</RootNamespace>
+    <AssemblyName>CalculusGame</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,35 +46,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Flashcard.cs">
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Flashcard.Designer.cs">
-      <DependentUpon>Flashcard.cs</DependentUpon>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Practice.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Practice.Designer.cs">
-      <DependentUpon>Practice.cs</DependentUpon>
-    </Compile>
-    <Compile Include="StartMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>StartMenu.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Practice.Designer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Flashcard.resx">
-      <DependentUpon>Flashcard.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>StartMenu.cs</DependentUpon>
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Practice.resx">
-      <DependentUpon>Practice.cs</DependentUpon>
-    </EmbeddedResource>
+    <EmbeddedResource Include="Practice.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

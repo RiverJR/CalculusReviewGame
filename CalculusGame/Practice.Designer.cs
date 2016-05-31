@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApplication1
+﻿namespace CalculusGame
 {
     partial class Practice
     {
